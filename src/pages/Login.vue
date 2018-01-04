@@ -1,32 +1,33 @@
 <template>
     <md-layout>
         <md-layout md-column md-align="center" md-vertical-align="center">
-            <md-card>
-                <md-card-header>
-                    <md-card-header-text>
-                        <div class="md-title">
-                            Login
-                        </div>
-                        <div class="md-subhead">for access</div>
-                    </md-card-header-text>
-                    <md-card-media>
+            <md-card md-theme-default>
+               <md-card-media-cover md-solid>
+                    <md-card-media md-1-1>
                         <img src="/images/launcher-icon-4x.png" alt="ET">
-                    </md-card-media>
-                </md-card-header>
-                <md-card-actions>
-                    <md-input-container :class="{ 'md-input-invalid': invalid }">
-                        <template v-if="phoneNumber">
-                            <label>Enter Code</label>
-                            <md-input v-model="code"></md-input>
-                            <md-button @click="validateClicked">Validate</md-button>
-                        </template>
-                        <template v-else>
-                            <label>Enter Phone</label>
-                            <md-input ref="phoneNumberInput" v-model="phone_number" pattern="^\+\d{11}$" placeholder="+19998675309" required></md-input>
-                            <md-button @click="loginClicked">Log In</md-button>
-                        </template>
-                    </md-input-container>
-                </md-card-actions>
+                    </md-card-media md-1-1>
+                    <md-card-area>
+                        <md-card-header>
+                            <div class="md-title">
+                                Login
+                            </div>
+                        </md-card-header>
+                    </md-card-area>
+                    <md-card-actions>
+                        <md-input-container :class="{ 'md-input-invalid': invalid }">
+                            <template v-if="phoneNumber">
+                                <label>Enter Code</label>
+                                <md-input v-model="code"></md-input>
+                                <md-button @click="validateClicked">Validate</md-button>
+                            </template>
+                            <template v-else>
+                                <label>Enter Phone</label>
+                                <md-input ref="phoneNumberInput" v-model="phone_number" pattern="^\+\d{11}$" placeholder="+19998675309" required></md-input>
+                                <md-button @click="loginClicked">Log In</md-button>
+                            </template>
+                        </md-input-container>
+                    </md-card-actions>
+                </md-card-media-cover>
             </md-card>
         </md-layout>
     </md-layout>
