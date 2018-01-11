@@ -38,10 +38,10 @@
                     <md-icon>add</md-icon>
                 </md-button>
                 <md-button class="md-fab md-primary md-mini md-clean">
-                    <md-icon>call</md-icon>
+                    <md-icon>search</md-icon>
                 </md-button>
                 <md-button class="md-fab md-primary md-mini md-clean">
-                    <md-icon>message</md-icon>
+                    <md-icon>account_circle</md-icon>
                 </md-button>
             </md-speed-dial>
         </template>
